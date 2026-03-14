@@ -1,110 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino Colombia Trivia Game</title>
+    <title>Casino Colombia Trivia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Casino Colombia Trivia Game</h1>
-    </header>
-    <div class="game-container">
-        <!-- Player Cards -->
-        <div class="player-cards">
-            <div class="player-card" id="player1-card">
-                <h2>Jugador 1</h2>
-                <p>Puntaje: <span id="player1-score">0</span></p>
-            </div>
-            <div class="player-card" id="player2-card">
-                <h2>Jugador 2</h2>
-                <p>Puntaje: <span id="player2-score">0</span></p>
-            </div>
-            <div class="player-card" id="player3-card">
-                <h2>Jugador 3</h2>
-                <p>Puntaje: <span id="player3-score">0</span></p>
-            </div>
-            <div class="player-card" id="player4-card">
-                <h2>Jugador 4</h2>
-                <p>Puntaje: <span id="player4-score">0</span></p>
-            </div>
+    <div id="game">
+        <h1>Casino Colombia Trivia</h1>
+        <div id="roulette-wheel"></div>
+        <div id="player-cards">
+            <!-- Player cards here -->
         </div>
-        <div class="number-grid">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>13</td>
-                        <td>14</td>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td>20</td>
-                        <td>21</td>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                        <td>26</td>
-                        <td>27</td>
-                        <td>28</td>
-                        <td>29</td>
-                    </tr>
-                    <tr>
-                        <td>30</td>
-                        <td>31</td>
-                        <td>32</td>
-                        <td>33</td>
-                        <td>34</td>
-                        <td>35</td>
-                        <td>36</td>
-                        <td>37</td>
-                        <td>38</td>
-                        <td>39</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div id="modal">
+            <div id="question"></div>
+            <button id="answer-btn">Answer</button>
         </div>
-        <!-- Roulette Wheel Animation -->
-        <div class="roulette-wheel">
-            <div class="wheel" id="wheel">
-                <!-- Wheel segments go here -->
-            </div>
-            <button id="spin-button">Girar</button>
-        </div>
-        <!-- Modal for Questions and Answers -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <h2 id="question">¿Pregunta aquí?</h2>
-                <div id="answers">
-                    <!-- Answer buttons go here -->
-                </div>
-            </div>
-        </div>
-        <!-- Winner Screen with Confetti Animation -->
-        <div id="winner-screen" class="winner-screen hidden">
-            <h2>¡Felicidades, <span id="winner-name"></span>! Has ganado.</h2>
-            <div id="confetti"></div>
+        <div id="winner-screen">
+            <h2>Congratulations!</h2>
+            <div id="confetti-animation">🎉</div>
         </div>
     </div>
     <script src="script.js"></script>
