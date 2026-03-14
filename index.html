@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Colombia Trivia Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        h1 { color: #333; }
+        #questions { margin-top: 20px; }
+        .question { margin-bottom: 20px; }
+        button { padding: 10px 15px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Casino Colombia Trivia Game</h1>
+    <div id="questions">
+        <div class="question">
+            <h2>Question 1: What is the capital of Colombia?</h2>
+            <button onclick="answerQuestion(1, 'Bogotá')">Bogotá</button>
+            <button onclick="answerQuestion(1, 'Medellín')">Medellín</button>
+            <button onclick="answerQuestion(1, 'Cali')">Cali</button>
+        </div>
+        <div class="question">
+            <h2>Question 2: What is the official currency of Colombia?</h2>
+            <button onclick="answerQuestion(2, 'Peso')">Peso</button>
+            <button onclick="answerQuestion(2, 'Dollar')">Dollar</button>
+            <button onclick="answerQuestion(2, 'Euro')">Euro</button>
+        </div>
+        <div class="question">
+            <h2>Question 3: Which city is known as the City of Eternal Spring?</h2>
+            <button onclick="answerQuestion(3, 'Medellín')">Medellín</button>
+            <button onclick="answerQuestion(3, 'Cali')">Cali</button>
+            <button onclick="answerQuestion(3, 'Bogotá')">Bogotá</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        function answerQuestion(questionNumber, answer) {
+            const correctAnswers = {
+                1: 'Bogotá',
+                2: 'Peso',
+                3: 'Medellín'
+            };
+
+            if (answer === correctAnswers[questionNumber]) {
+                score++;
+                alert('Correct! Your score is now ' + score);
+            } else {
+                alert('Wrong answer! Your score remains ' + score);
+            }
+
+            if (questionNumber === 3) {
+                alert('Game Over! Your final score is ' + score);
+            }
+        }
+    </script>
+</body>
+</html>
